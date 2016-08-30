@@ -12,7 +12,7 @@ namespace Uppgift1
         {
            
 
-            Console.WriteLine("och nu skriv ditt efternamn");
+            Console.WriteLine("\nHej, skriv ditt efternamn nedan!");
 
             string nameE = Console.ReadLine();
 
