@@ -24,11 +24,9 @@ namespace uppgift4
 
             textBox3.Text = String.Empty;
 
-            double value1;
-            value1 = Convert.ToDouble(textBox1.Text);
+            double value1 = Convert.ToDouble(textBox1.Text);
 
-            double value2;
-            value2 = Convert.ToDouble(textBox2.Text);
+            double value2 = Convert.ToDouble(textBox2.Text);
 
             double answerDbl = value1 + value2;
             string answer;
@@ -44,11 +42,9 @@ namespace uppgift4
         {
             textBox3.Text = String.Empty;
 
-            double value1;
-            value1 = Convert.ToDouble(textBox1.Text);
+            double value1 = Convert.ToDouble(textBox1.Text);
 
-            double value2;
-            value2 = Convert.ToDouble(textBox2.Text);
+            double value2 = Convert.ToDouble(textBox2.Text);
 
             double answerDbl = value1 - value2;
             string answer;
@@ -64,11 +60,9 @@ namespace uppgift4
         {
             textBox3.Text = String.Empty;
 
-            double value1;
-            value1 = Convert.ToDouble(textBox1.Text);
+            double value1 = Convert.ToDouble(textBox1.Text);
 
-            double value2;
-            value2 = Convert.ToDouble(textBox2.Text);
+            double value2 = Convert.ToDouble(textBox2.Text);
 
             double answerDbl = value1 * value2;
             string answer;
@@ -84,11 +78,9 @@ namespace uppgift4
         {
             textBox3.Text = String.Empty;
 
-            double value1;
-            value1 = Convert.ToDouble(textBox1.Text);
+            double value1 = Convert.ToDouble(textBox1.Text);
 
-            double value2;
-            value2 = Convert.ToDouble(textBox2.Text);
+            double value2 = Convert.ToDouble(textBox2.Text);
 
             double answerDbl = value1 / value2;
             string answer;
