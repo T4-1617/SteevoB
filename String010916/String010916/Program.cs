@@ -38,6 +38,11 @@ namespace String010916
             char[] nameArray = nameLow.ToCharArray();
             Console.Write("Your name backwards is: ");
 
+            //char[] reverse = nameLow.ToCharArray();
+            //Array.Reverse(reverse);
+            //new string(reverse);
+            //Console.WriteLine(reverse);
+
             for (int i = (name.Length - 1); i >= 0; i--)
             {
                 Console.Write(nameArray[i]);
