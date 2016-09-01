@@ -16,16 +16,13 @@ namespace String010916
 
 
             Console.WriteLine("Name length: " + name.Length);
-
             Console.WriteLine("Name length without spaces: " + name.Replace(" ", string.Empty).Length);
 
             Console.WriteLine("Your first name is " + name.Split(' ')[0] + " and consists of " + name.Split(' ')[0].Length + " characters");
-
             Console.WriteLine("Your last name is " + name.Split(' ')[1] + " and consists of " + name.Split(' ')[1].Length + " characters");
 
-            Console.WriteLine(name.Split(' ')[1]+", "+ name.Split(' ')[0]);
+            Console.WriteLine(name.Split(' ')[1]+", "+ name.Split(' ')[0] + "\n");
 
-            Console.WriteLine();
 
             foreach (char letter in name.Split(' ')[0])
             {
@@ -35,6 +32,15 @@ namespace String010916
             foreach (char letter in name.Split(' ')[1])
             {
                 Console.WriteLine("------>" + letter);
+            }
+
+            string nameLow = name.ToLower();
+            char[] nameArray = nameLow.ToCharArray();
+            Console.Write("Your name backwards is: ");
+
+            for (int i = (name.Length - 1); i >= 0; i--)
+            {
+                Console.Write(nameArray[i]);
             }
 
 
