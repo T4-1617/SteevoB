@@ -23,7 +23,7 @@ namespace String010916
 
             Console.WriteLine("Your last name is " + name.Split(' ')[1] + " and consists of " + name.Split(' ')[1].Length + " characters");
 
-
+            Console.WriteLine(name.Split(' ')[1]+", "+ name.Split(' ')[0]);
 
 
 
