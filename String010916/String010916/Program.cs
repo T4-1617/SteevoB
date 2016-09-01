@@ -17,6 +17,8 @@ namespace String010916
 
             Console.WriteLine(name.Length);
 
+            Console.WriteLine(name.Replace(" ", String.Empty).Length);
+
 
         }
     }
