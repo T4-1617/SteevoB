@@ -15,9 +15,16 @@ namespace String010916
             name = Console.ReadLine();
 
 
-            Console.WriteLine(name.Length);
+            Console.WriteLine("Name length: " + name.Length);
 
-            Console.WriteLine(name.Replace(" ", String.Empty).Length);
+            Console.WriteLine("Name length without spaces: " + name.Replace(" ", string.Empty).Length);
+
+            Console.WriteLine("Your first name is " + name.Split(' ')[0] + " and consists of " + name.Split(' ')[0].Length + " characters");
+
+            Console.WriteLine("Your last name is " + name.Split(' ')[1] + " and consists of " + name.Split(' ')[1].Length + " characters");
+
+
+
 
 
         }
