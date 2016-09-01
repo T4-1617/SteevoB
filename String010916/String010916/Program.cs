@@ -25,6 +25,18 @@ namespace String010916
 
             Console.WriteLine(name.Split(' ')[1]+", "+ name.Split(' ')[0]);
 
+            Console.WriteLine();
+
+            foreach (char letter in name.Split(' ')[0])
+            {
+                Console.WriteLine("---->" + letter);
+            }
+
+            foreach (char letter in name.Split(' ')[1])
+            {
+                Console.WriteLine("------>" + letter);
+            }
+
 
 
         }
