@@ -48,8 +48,20 @@ namespace String010916
                 Console.Write(nameArray[i]);
             }
 
+            Console.WriteLine(string.Empty);
 
+            for (int i = 0; i < name.Length; i++)
+            {
+                if(i%2 == 1)
+                {
+                    Console.Write(name[i].ToString().ToLower());
+                }
+                else
+                {
+                    Console.Write(name[i].ToString().ToUpper());
+                }
 
+            }
         }
     }
 }
