@@ -62,6 +62,33 @@ namespace String010916
                 }
 
             }
+
+            Console.WriteLine(string.Empty);
+
+            for (int i = 0; i < name.Length; i++)
+            {
+                switch (nameArray[i])
+                {
+                    case 'e':
+                        Console.Write('3');
+                        break;
+                    case 'a':
+                        Console.Write('4');
+                        break;
+                    case 'i':
+                        Console.Write('1');
+                        break;
+                    case 't':
+                        Console.Write('7');
+                        break;
+                    case 'o':
+                        Console.Write('0');
+                        break;
+                    default: Console.Write(nameArray[i]);
+                        break;
+                }
+            }
+            Console.WriteLine(string.Empty);
         }
     }
 }
