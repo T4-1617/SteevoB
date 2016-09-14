@@ -8,10 +8,11 @@ namespace Biluthyrning140916
 {
     class Car
     {
-        public int HPower { get; set; }
+        public string HPower { get; set; }
         public string model { get; set; }
         public string propellant { get; set; }
         public string WDrive { get; set; }
         public string regNo { get; set; }
+        public string seats { get; set; }
     }
 }
