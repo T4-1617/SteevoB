@@ -28,32 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.txtLastName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.radioCustomer = new System.Windows.Forms.RadioButton();
+            this.radioEmployee = new System.Windows.Forms.RadioButton();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.listCustomers = new System.Windows.Forms.ListBox();
+            this.listEmployees = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtFirstName
             // 
-            this.textBox1.Location = new System.Drawing.Point(73, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtFirstName.Location = new System.Drawing.Point(73, 9);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Size = new System.Drawing.Size(100, 20);
+            this.txtFirstName.TabIndex = 0;
             // 
-            // textBox2
+            // txtLastName
             // 
-            this.textBox2.Location = new System.Drawing.Point(73, 35);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtLastName.Location = new System.Drawing.Point(73, 35);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(100, 20);
+            this.txtLastName.TabIndex = 1;
             // 
             // label1
             // 
@@ -73,52 +73,53 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Last name";
             // 
-            // radioButton1
+            // radioCustomer
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(187, 10);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(69, 17);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Customer";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioCustomer.AutoSize = true;
+            this.radioCustomer.Location = new System.Drawing.Point(187, 10);
+            this.radioCustomer.Name = "radioCustomer";
+            this.radioCustomer.Size = new System.Drawing.Size(69, 17);
+            this.radioCustomer.TabIndex = 4;
+            this.radioCustomer.TabStop = true;
+            this.radioCustomer.Text = "Customer";
+            this.radioCustomer.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioEmployee
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(187, 37);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(71, 17);
-            this.radioButton2.TabIndex = 5;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Employee";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioEmployee.AutoSize = true;
+            this.radioEmployee.Location = new System.Drawing.Point(187, 37);
+            this.radioEmployee.Name = "radioEmployee";
+            this.radioEmployee.Size = new System.Drawing.Size(71, 17);
+            this.radioEmployee.TabIndex = 5;
+            this.radioEmployee.TabStop = true;
+            this.radioEmployee.Text = "Employee";
+            this.radioEmployee.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.Location = new System.Drawing.Point(109, 84);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdd.Location = new System.Drawing.Point(109, 84);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 6;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // listBox1
+            // listCustomers
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(15, 128);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(257, 95);
-            this.listBox1.TabIndex = 7;
+            this.listCustomers.FormattingEnabled = true;
+            this.listCustomers.Location = new System.Drawing.Point(15, 128);
+            this.listCustomers.Name = "listCustomers";
+            this.listCustomers.Size = new System.Drawing.Size(257, 95);
+            this.listCustomers.TabIndex = 7;
             // 
-            // listBox2
+            // listEmployees
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(15, 249);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(257, 95);
-            this.listBox2.TabIndex = 8;
+            this.listEmployees.FormattingEnabled = true;
+            this.listEmployees.Location = new System.Drawing.Point(15, 249);
+            this.listEmployees.Name = "listEmployees";
+            this.listEmployees.Size = new System.Drawing.Size(257, 95);
+            this.listEmployees.TabIndex = 8;
             // 
             // label3
             // 
@@ -145,15 +146,15 @@
             this.ClientSize = new System.Drawing.Size(284, 375);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.listEmployees);
+            this.Controls.Add(this.listCustomers);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.radioEmployee);
+            this.Controls.Add(this.radioCustomer);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtLastName);
+            this.Controls.Add(this.txtFirstName);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -163,15 +164,15 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtFirstName;
+        private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.RadioButton radioCustomer;
+        private System.Windows.Forms.RadioButton radioEmployee;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.ListBox listCustomers;
+        private System.Windows.Forms.ListBox listEmployees;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
     }
