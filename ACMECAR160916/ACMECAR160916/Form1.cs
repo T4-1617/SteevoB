@@ -13,16 +13,16 @@ namespace ACMECAR160916
     public partial class Form1 : Form
     {
         System.Collections.ArrayList Cars;
-
+        int AvailableCars;
 
         public Form1()
         {
             InitializeComponent();
 
             
-            //pnlShow.Visible = false;
-            //pnlAdd.Visible = false;
-            //pnlReturn.Visible = false;
+            pnlShow.Visible = false;
+            pnlAdd.Visible = false;
+            pnlReturn.Visible = false;
 
             Cars = new System.Collections.ArrayList();
 
@@ -35,32 +35,52 @@ namespace ACMECAR160916
 
         private void btnShow_Click(object sender, EventArgs e)
         {
-            //pnlShow.Visible = true;
-            //pnlReturn.Visible = false;asdasd
-            //pnlAdd.Visible = false;
+            AvailableCars = 0;
+            pnlShow.Visible = true;
+            pnlReturn.Visible = false;
+            pnlAdd.Visible = false;
+            pnlInfo.Visible = false;
 
             lstCars.Items.Clear();
 
             foreach (Car item in Cars)
             {
-                lstCars.Items.Add(item);
-                lstCars.DisplayMember = "MakeModel";
+                if (!item.Rented)
+                {
+                    lstCars.Items.Add(item);
+                    lstCars.DisplayMember = "MakeModel";
+                    AvailableCars++;
+                }
             }
+            lblCarsAvailable.Text = String.Format("We have {0} car(s) available", AvailableCars);
+
+
 
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //pnlAdd.Visible = true;
-            //pnlReturn.Visible = false;
-            //pnlShow.Visible = false;
+            pnlAdd.Visible = true;
+            pnlReturn.Visible = false;
+            pnlShow.Visible = false;
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            //pnlAdd.Visible = false;
-            //pnlReturn.Visible = true;
-            //pnlShow.Visible = false;
+            pnlAdd.Visible = false;
+            pnlReturn.Visible = true;
+            pnlShow.Visible = false;
+
+            lstReturn.Items.Clear();
+
+            foreach (Car item in Cars)
+            {
+                if (item.Rented)
+                {
+                    lstReturn.Items.Add(item);
+                    lstReturn.DisplayMember = "MakeModel";
+                }
+            }
         }
 
         private void btnAddOk_Click(object sender, EventArgs e)
@@ -69,6 +89,57 @@ namespace ACMECAR160916
             txtColor.Text = string.Empty;
             txtMake.Text = string.Empty;
             txtModel.Text = string.Empty;
+            txtMake.Focus();
+        }
+
+        private void btnBook_Click(object sender, EventArgs e)
+        {
+            Car x = (Car)lstCars.SelectedItem;
+            x.Rented = true;
+            lstCars.Items.Clear();
+
+            foreach (Car item in Cars)
+            {
+
+                if (!item.Rented)
+                {
+                    lstCars.Items.Add(item);
+                }
+            }       
+        }
+
+        private void btnReturnOk_Click(object sender, EventArgs e)
+        {
+            AvailableCars++;
+            Car x = (Car)lstReturn.SelectedItem;
+            x.Rented = false;
+            lstReturn.Items.Clear();
+
+            foreach (Car item in Cars)
+            {
+                if (item.Rented)
+                {
+                    lstReturn.Items.Add(item);
+                }
+
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstCars_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Car x = (Car)lstCars.SelectedItem;
+            if (x != null)
+            {
+                pnlInfo.Visible = true;
+                lblMakeInfo.Text = x.Make;
+                lblModelInfo.Text = x.Model;
+                lblColorInfo.Text = x.Color;
+            }
         }
     }
 }

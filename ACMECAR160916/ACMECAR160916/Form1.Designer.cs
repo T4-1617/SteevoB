@@ -31,30 +31,32 @@
             this.btnShow = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblCarsAvailable = new System.Windows.Forms.Label();
             this.pnlShow = new System.Windows.Forms.Panel();
-            this.pnlAdd = new System.Windows.Forms.Panel();
-            this.pnlReturn = new System.Windows.Forms.Panel();
-            this.lstCars = new System.Windows.Forms.ListBox();
-            this.lblMake = new System.Windows.Forms.Label();
-            this.lblModel = new System.Windows.Forms.Label();
-            this.lblColor = new System.Windows.Forms.Label();
-            this.txtMake = new System.Windows.Forms.TextBox();
-            this.txtModel = new System.Windows.Forms.TextBox();
-            this.txtColor = new System.Windows.Forms.TextBox();
-            this.lstReturn = new System.Windows.Forms.ListBox();
-            this.btnBook = new System.Windows.Forms.Button();
-            this.btnAddOk = new System.Windows.Forms.Button();
-            this.btnReturnOk = new System.Windows.Forms.Button();
             this.pnlInfo = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnBook = new System.Windows.Forms.Button();
+            this.lstCars = new System.Windows.Forms.ListBox();
+            this.pnlAdd = new System.Windows.Forms.Panel();
+            this.btnAddOk = new System.Windows.Forms.Button();
+            this.txtColor = new System.Windows.Forms.TextBox();
+            this.txtModel = new System.Windows.Forms.TextBox();
+            this.txtMake = new System.Windows.Forms.TextBox();
+            this.lblColor = new System.Windows.Forms.Label();
+            this.lblModel = new System.Windows.Forms.Label();
+            this.lblMake = new System.Windows.Forms.Label();
+            this.pnlReturn = new System.Windows.Forms.Panel();
+            this.btnReturnOk = new System.Windows.Forms.Button();
+            this.lstReturn = new System.Windows.Forms.ListBox();
+            this.lblMakeInfo = new System.Windows.Forms.Label();
+            this.lblModelInfo = new System.Windows.Forms.Label();
+            this.lblColorInfo = new System.Windows.Forms.Label();
             this.pnlShow.SuspendLayout();
+            this.pnlInfo.SuspendLayout();
             this.pnlAdd.SuspendLayout();
             this.pnlReturn.SuspendLayout();
-            this.pnlInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnShow
@@ -87,24 +89,86 @@
             this.btnReturn.UseVisualStyleBackColor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
-            // label1
+            // lblCarsAvailable
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
+            this.lblCarsAvailable.AutoSize = true;
+            this.lblCarsAvailable.Location = new System.Drawing.Point(3, 6);
+            this.lblCarsAvailable.Name = "lblCarsAvailable";
+            this.lblCarsAvailable.Size = new System.Drawing.Size(35, 13);
+            this.lblCarsAvailable.TabIndex = 3;
+            this.lblCarsAvailable.Text = "label1";
             // 
             // pnlShow
             // 
             this.pnlShow.Controls.Add(this.pnlInfo);
             this.pnlShow.Controls.Add(this.btnBook);
             this.pnlShow.Controls.Add(this.lstCars);
-            this.pnlShow.Location = new System.Drawing.Point(12, 113);
+            this.pnlShow.Controls.Add(this.lblCarsAvailable);
+            this.pnlShow.Location = new System.Drawing.Point(12, 94);
             this.pnlShow.Name = "pnlShow";
-            this.pnlShow.Size = new System.Drawing.Size(268, 159);
+            this.pnlShow.Size = new System.Drawing.Size(268, 178);
             this.pnlShow.TabIndex = 4;
+            // 
+            // pnlInfo
+            // 
+            this.pnlInfo.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnlInfo.Controls.Add(this.lblColorInfo);
+            this.pnlInfo.Controls.Add(this.lblModelInfo);
+            this.pnlInfo.Controls.Add(this.lblMakeInfo);
+            this.pnlInfo.Controls.Add(this.label4);
+            this.pnlInfo.Controls.Add(this.label3);
+            this.pnlInfo.Controls.Add(this.label2);
+            this.pnlInfo.Location = new System.Drawing.Point(132, 22);
+            this.pnlInfo.Name = "pnlInfo";
+            this.pnlInfo.Size = new System.Drawing.Size(133, 108);
+            this.pnlInfo.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 78);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Color:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 47);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Model:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Make:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // btnBook
+            // 
+            this.btnBook.Location = new System.Drawing.Point(77, 135);
+            this.btnBook.Name = "btnBook";
+            this.btnBook.Size = new System.Drawing.Size(102, 40);
+            this.btnBook.TabIndex = 1;
+            this.btnBook.Text = "Book";
+            this.btnBook.UseVisualStyleBackColor = true;
+            this.btnBook.Click += new System.EventHandler(this.btnBook_Click);
+            // 
+            // lstCars
+            // 
+            this.lstCars.FormattingEnabled = true;
+            this.lstCars.Location = new System.Drawing.Point(3, 22);
+            this.lstCars.Name = "lstCars";
+            this.lstCars.Size = new System.Drawing.Size(126, 108);
+            this.lstCars.TabIndex = 0;
+            this.lstCars.SelectedIndexChanged += new System.EventHandler(this.lstCars_SelectedIndexChanged);
             // 
             // pnlAdd
             // 
@@ -120,88 +184,6 @@
             this.pnlAdd.Size = new System.Drawing.Size(268, 159);
             this.pnlAdd.TabIndex = 5;
             // 
-            // pnlReturn
-            // 
-            this.pnlReturn.Controls.Add(this.btnReturnOk);
-            this.pnlReturn.Controls.Add(this.lstReturn);
-            this.pnlReturn.Location = new System.Drawing.Point(560, 113);
-            this.pnlReturn.Name = "pnlReturn";
-            this.pnlReturn.Size = new System.Drawing.Size(268, 159);
-            this.pnlReturn.TabIndex = 6;
-            // 
-            // lstCars
-            // 
-            this.lstCars.FormattingEnabled = true;
-            this.lstCars.Location = new System.Drawing.Point(3, 3);
-            this.lstCars.Name = "lstCars";
-            this.lstCars.Size = new System.Drawing.Size(126, 108);
-            this.lstCars.TabIndex = 0;
-            // 
-            // lblMake
-            // 
-            this.lblMake.AutoSize = true;
-            this.lblMake.Location = new System.Drawing.Point(10, 15);
-            this.lblMake.Name = "lblMake";
-            this.lblMake.Size = new System.Drawing.Size(34, 13);
-            this.lblMake.TabIndex = 0;
-            this.lblMake.Text = "Make";
-            // 
-            // lblModel
-            // 
-            this.lblModel.AutoSize = true;
-            this.lblModel.Location = new System.Drawing.Point(10, 38);
-            this.lblModel.Name = "lblModel";
-            this.lblModel.Size = new System.Drawing.Size(36, 13);
-            this.lblModel.TabIndex = 1;
-            this.lblModel.Text = "Model";
-            // 
-            // lblColor
-            // 
-            this.lblColor.AutoSize = true;
-            this.lblColor.Location = new System.Drawing.Point(10, 63);
-            this.lblColor.Name = "lblColor";
-            this.lblColor.Size = new System.Drawing.Size(31, 13);
-            this.lblColor.TabIndex = 2;
-            this.lblColor.Text = "Color";
-            // 
-            // txtMake
-            // 
-            this.txtMake.Location = new System.Drawing.Point(52, 11);
-            this.txtMake.Name = "txtMake";
-            this.txtMake.Size = new System.Drawing.Size(100, 20);
-            this.txtMake.TabIndex = 3;
-            // 
-            // txtModel
-            // 
-            this.txtModel.Location = new System.Drawing.Point(52, 35);
-            this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(100, 20);
-            this.txtModel.TabIndex = 4;
-            // 
-            // txtColor
-            // 
-            this.txtColor.Location = new System.Drawing.Point(52, 60);
-            this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(100, 20);
-            this.txtColor.TabIndex = 5;
-            // 
-            // lstReturn
-            // 
-            this.lstReturn.FormattingEnabled = true;
-            this.lstReturn.Location = new System.Drawing.Point(3, 3);
-            this.lstReturn.Name = "lstReturn";
-            this.lstReturn.Size = new System.Drawing.Size(262, 108);
-            this.lstReturn.TabIndex = 0;
-            // 
-            // btnBook
-            // 
-            this.btnBook.Location = new System.Drawing.Point(77, 116);
-            this.btnBook.Name = "btnBook";
-            this.btnBook.Size = new System.Drawing.Size(102, 40);
-            this.btnBook.TabIndex = 1;
-            this.btnBook.Text = "Book";
-            this.btnBook.UseVisualStyleBackColor = true;
-            // 
             // btnAddOk
             // 
             this.btnAddOk.Location = new System.Drawing.Point(83, 116);
@@ -212,6 +194,63 @@
             this.btnAddOk.UseVisualStyleBackColor = true;
             this.btnAddOk.Click += new System.EventHandler(this.btnAddOk_Click);
             // 
+            // txtColor
+            // 
+            this.txtColor.Location = new System.Drawing.Point(52, 60);
+            this.txtColor.Name = "txtColor";
+            this.txtColor.Size = new System.Drawing.Size(100, 20);
+            this.txtColor.TabIndex = 5;
+            // 
+            // txtModel
+            // 
+            this.txtModel.Location = new System.Drawing.Point(52, 35);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(100, 20);
+            this.txtModel.TabIndex = 4;
+            // 
+            // txtMake
+            // 
+            this.txtMake.Location = new System.Drawing.Point(52, 11);
+            this.txtMake.Name = "txtMake";
+            this.txtMake.Size = new System.Drawing.Size(100, 20);
+            this.txtMake.TabIndex = 3;
+            // 
+            // lblColor
+            // 
+            this.lblColor.AutoSize = true;
+            this.lblColor.Location = new System.Drawing.Point(10, 63);
+            this.lblColor.Name = "lblColor";
+            this.lblColor.Size = new System.Drawing.Size(31, 13);
+            this.lblColor.TabIndex = 2;
+            this.lblColor.Text = "Color";
+            // 
+            // lblModel
+            // 
+            this.lblModel.AutoSize = true;
+            this.lblModel.Location = new System.Drawing.Point(10, 38);
+            this.lblModel.Name = "lblModel";
+            this.lblModel.Size = new System.Drawing.Size(36, 13);
+            this.lblModel.TabIndex = 1;
+            this.lblModel.Text = "Model";
+            // 
+            // lblMake
+            // 
+            this.lblMake.AutoSize = true;
+            this.lblMake.Location = new System.Drawing.Point(10, 15);
+            this.lblMake.Name = "lblMake";
+            this.lblMake.Size = new System.Drawing.Size(34, 13);
+            this.lblMake.TabIndex = 0;
+            this.lblMake.Text = "Make";
+            // 
+            // pnlReturn
+            // 
+            this.pnlReturn.Controls.Add(this.btnReturnOk);
+            this.pnlReturn.Controls.Add(this.lstReturn);
+            this.pnlReturn.Location = new System.Drawing.Point(560, 113);
+            this.pnlReturn.Name = "pnlReturn";
+            this.pnlReturn.Size = new System.Drawing.Size(268, 159);
+            this.pnlReturn.TabIndex = 6;
+            // 
             // btnReturnOk
             // 
             this.btnReturnOk.Location = new System.Drawing.Point(79, 117);
@@ -220,54 +259,42 @@
             this.btnReturnOk.TabIndex = 7;
             this.btnReturnOk.Text = "Return";
             this.btnReturnOk.UseVisualStyleBackColor = true;
+            this.btnReturnOk.Click += new System.EventHandler(this.btnReturnOk_Click);
             // 
-            // pnlInfo
+            // lstReturn
             // 
-            this.pnlInfo.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pnlInfo.Controls.Add(this.label5);
-            this.pnlInfo.Controls.Add(this.label4);
-            this.pnlInfo.Controls.Add(this.label3);
-            this.pnlInfo.Controls.Add(this.label2);
-            this.pnlInfo.Location = new System.Drawing.Point(132, 3);
-            this.pnlInfo.Name = "pnlInfo";
-            this.pnlInfo.Size = new System.Drawing.Size(133, 108);
-            this.pnlInfo.TabIndex = 2;
+            this.lstReturn.FormattingEnabled = true;
+            this.lstReturn.Location = new System.Drawing.Point(3, 3);
+            this.lstReturn.Name = "lstReturn";
+            this.lstReturn.Size = new System.Drawing.Size(262, 108);
+            this.lstReturn.TabIndex = 0;
             // 
-            // label2
+            // lblMakeInfo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "label2";
+            this.lblMakeInfo.AutoSize = true;
+            this.lblMakeInfo.Location = new System.Drawing.Point(47, 16);
+            this.lblMakeInfo.Name = "lblMakeInfo";
+            this.lblMakeInfo.Size = new System.Drawing.Size(30, 13);
+            this.lblMakeInfo.TabIndex = 3;
+            this.lblMakeInfo.Text = "aasd";
             // 
-            // label3
+            // lblModelInfo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 35);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "label3";
+            this.lblModelInfo.AutoSize = true;
+            this.lblModelInfo.Location = new System.Drawing.Point(50, 47);
+            this.lblModelInfo.Name = "lblModelInfo";
+            this.lblModelInfo.Size = new System.Drawing.Size(35, 13);
+            this.lblModelInfo.TabIndex = 4;
+            this.lblModelInfo.Text = "label5";
             // 
-            // label4
+            // lblColorInfo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 59);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "label4";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 76);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "label5";
+            this.lblColorInfo.AutoSize = true;
+            this.lblColorInfo.Location = new System.Drawing.Point(47, 78);
+            this.lblColorInfo.Name = "lblColorInfo";
+            this.lblColorInfo.Size = new System.Drawing.Size(35, 13);
+            this.lblColorInfo.TabIndex = 5;
+            this.lblColorInfo.Text = "label6";
             // 
             // Form1
             // 
@@ -277,20 +304,19 @@
             this.Controls.Add(this.pnlReturn);
             this.Controls.Add(this.pnlAdd);
             this.Controls.Add(this.pnlShow);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnShow);
             this.Name = "Form1";
             this.Text = "Form1";
             this.pnlShow.ResumeLayout(false);
+            this.pnlShow.PerformLayout();
+            this.pnlInfo.ResumeLayout(false);
+            this.pnlInfo.PerformLayout();
             this.pnlAdd.ResumeLayout(false);
             this.pnlAdd.PerformLayout();
             this.pnlReturn.ResumeLayout(false);
-            this.pnlInfo.ResumeLayout(false);
-            this.pnlInfo.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -299,7 +325,7 @@
         private System.Windows.Forms.Button btnShow;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnReturn;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblCarsAvailable;
         private System.Windows.Forms.Panel pnlShow;
         private System.Windows.Forms.Panel pnlAdd;
         private System.Windows.Forms.Panel pnlReturn;
@@ -315,10 +341,12 @@
         private System.Windows.Forms.Button btnAddOk;
         private System.Windows.Forms.Button btnReturnOk;
         private System.Windows.Forms.Panel pnlInfo;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblColorInfo;
+        private System.Windows.Forms.Label lblModelInfo;
+        private System.Windows.Forms.Label lblMakeInfo;
     }
 }
 
