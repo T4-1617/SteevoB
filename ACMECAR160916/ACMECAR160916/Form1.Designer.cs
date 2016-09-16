@@ -46,9 +46,15 @@
             this.btnBook = new System.Windows.Forms.Button();
             this.btnAddOk = new System.Windows.Forms.Button();
             this.btnReturnOk = new System.Windows.Forms.Button();
+            this.pnlInfo = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.pnlShow.SuspendLayout();
             this.pnlAdd.SuspendLayout();
             this.pnlReturn.SuspendLayout();
+            this.pnlInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnShow
@@ -92,6 +98,7 @@
             // 
             // pnlShow
             // 
+            this.pnlShow.Controls.Add(this.pnlInfo);
             this.pnlShow.Controls.Add(this.btnBook);
             this.pnlShow.Controls.Add(this.lstCars);
             this.pnlShow.Location = new System.Drawing.Point(12, 113);
@@ -127,7 +134,7 @@
             this.lstCars.FormattingEnabled = true;
             this.lstCars.Location = new System.Drawing.Point(3, 3);
             this.lstCars.Name = "lstCars";
-            this.lstCars.Size = new System.Drawing.Size(262, 108);
+            this.lstCars.Size = new System.Drawing.Size(126, 108);
             this.lstCars.TabIndex = 0;
             // 
             // lblMake
@@ -197,12 +204,13 @@
             // 
             // btnAddOk
             // 
-            this.btnAddOk.Location = new System.Drawing.Point(31, 96);
+            this.btnAddOk.Location = new System.Drawing.Point(83, 116);
             this.btnAddOk.Name = "btnAddOk";
             this.btnAddOk.Size = new System.Drawing.Size(102, 40);
             this.btnAddOk.TabIndex = 6;
             this.btnAddOk.Text = "Add";
             this.btnAddOk.UseVisualStyleBackColor = true;
+            this.btnAddOk.Click += new System.EventHandler(this.btnAddOk_Click);
             // 
             // btnReturnOk
             // 
@@ -212,6 +220,54 @@
             this.btnReturnOk.TabIndex = 7;
             this.btnReturnOk.Text = "Return";
             this.btnReturnOk.UseVisualStyleBackColor = true;
+            // 
+            // pnlInfo
+            // 
+            this.pnlInfo.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnlInfo.Controls.Add(this.label5);
+            this.pnlInfo.Controls.Add(this.label4);
+            this.pnlInfo.Controls.Add(this.label3);
+            this.pnlInfo.Controls.Add(this.label2);
+            this.pnlInfo.Location = new System.Drawing.Point(132, 3);
+            this.pnlInfo.Name = "pnlInfo";
+            this.pnlInfo.Size = new System.Drawing.Size(133, 108);
+            this.pnlInfo.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(4, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "label2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 35);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "label3";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(7, 59);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "label4";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(10, 76);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "label5";
             // 
             // Form1
             // 
@@ -231,6 +287,8 @@
             this.pnlAdd.ResumeLayout(false);
             this.pnlAdd.PerformLayout();
             this.pnlReturn.ResumeLayout(false);
+            this.pnlInfo.ResumeLayout(false);
+            this.pnlInfo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,6 +314,11 @@
         private System.Windows.Forms.Button btnBook;
         private System.Windows.Forms.Button btnAddOk;
         private System.Windows.Forms.Button btnReturnOk;
+        private System.Windows.Forms.Panel pnlInfo;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
 

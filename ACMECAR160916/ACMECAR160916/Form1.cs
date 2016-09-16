@@ -19,6 +19,7 @@ namespace ACMECAR160916
         {
             InitializeComponent();
 
+            
             //pnlShow.Visible = false;
             //pnlAdd.Visible = false;
             //pnlReturn.Visible = false;
@@ -37,6 +38,15 @@ namespace ACMECAR160916
             //pnlShow.Visible = true;
             //pnlReturn.Visible = false;
             //pnlAdd.Visible = false;
+
+            lstCars.Items.Clear();
+
+            foreach (Car item in Cars)
+            {
+                lstCars.Items.Add(item);
+                lstCars.DisplayMember = "MakeModel";
+            }
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -51,6 +61,14 @@ namespace ACMECAR160916
             //pnlAdd.Visible = false;
             //pnlReturn.Visible = true;
             //pnlShow.Visible = false;
+        }
+
+        private void btnAddOk_Click(object sender, EventArgs e)
+        {
+            Cars.Add(new Car { Make = txtMake.Text, Model = txtModel.Text, Color = txtColor.Text, Rented = false });
+            txtColor.Text = string.Empty;
+            txtMake.Text = string.Empty;
+            txtModel.Text = string.Empty;
         }
     }
 }
