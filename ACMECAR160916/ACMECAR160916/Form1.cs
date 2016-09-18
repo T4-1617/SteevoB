@@ -26,7 +26,7 @@ namespace ACMECAR160916
 
             Cars = new System.Collections.ArrayList();
 
-            Cars.Add(new Car() { Make = "Volvo", Model = "V70", Color = "Red", Rented = false });
+            Cars.Add(new Car() { Make = "Volvo", Model = "V70", Color = "Blue", Rented = false });
             Cars.Add(new Car() { Make = "Dodge", Model = "Nitro", Color = "Silver", Rented = false });
             Cars.Add(new Car() { Make = "Porsche", Model = "Cayenne", Color = "Orange", Rented = false });
 
