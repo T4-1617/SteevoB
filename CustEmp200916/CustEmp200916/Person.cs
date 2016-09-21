@@ -10,20 +10,28 @@ namespace CustEmp200916
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string PhoneNumber { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0} {1}", FirstName, LastName);
+        }
     }
 
     public class Customer : Person
     {
-
+        public int CustomerId { get; set; }
     }
-
+    //kjhoijoij
     public class Employee : Person
     {
-
+        public int EmployeeId { get; set; }
+        public string Title { get; set; }
+        public string Salary { get; set; }
     }
 
     public class Supplier : Person
     {
-
+        public string Company { get; set; }
     }
 }
