@@ -12,9 +12,16 @@ namespace CustEmp200916
 {
     public partial class Form1 : Form
     {
+        System.Collections.ArrayList PeopleList;
+
         public Form1()
         {
             InitializeComponent();
+            PeopleList = new System.Collections.ArrayList();
+
+
         }
+
+
     }
 }
