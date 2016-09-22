@@ -98,6 +98,18 @@ namespace ACMECAR160916
             x.Rented = true;
             lstCars.Items.Clear();
 
+            if (txtCustomer.TextLength > 1)
+            {
+                x.Rented = true;
+                lblWarning.Visible = false;
+            }
+
+            else
+            {
+                lblWarning.Visible = true;
+                lblWarning.Text = "You must enter a valid name!";
+            }
+
             foreach (Car item in Cars)
             {
 

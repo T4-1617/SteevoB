@@ -34,6 +34,9 @@
             this.lblCarsAvailable = new System.Windows.Forms.Label();
             this.pnlShow = new System.Windows.Forms.Panel();
             this.pnlInfo = new System.Windows.Forms.Panel();
+            this.lblColorInfo = new System.Windows.Forms.Label();
+            this.lblModelInfo = new System.Windows.Forms.Label();
+            this.lblMakeInfo = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,9 +53,9 @@
             this.pnlReturn = new System.Windows.Forms.Panel();
             this.btnReturnOk = new System.Windows.Forms.Button();
             this.lstReturn = new System.Windows.Forms.ListBox();
-            this.lblMakeInfo = new System.Windows.Forms.Label();
-            this.lblModelInfo = new System.Windows.Forms.Label();
-            this.lblColorInfo = new System.Windows.Forms.Label();
+            this.txtCustomer = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblWarning = new System.Windows.Forms.Label();
             this.pnlShow.SuspendLayout();
             this.pnlInfo.SuspendLayout();
             this.pnlAdd.SuspendLayout();
@@ -100,6 +103,9 @@
             // 
             // pnlShow
             // 
+            this.pnlShow.Controls.Add(this.lblWarning);
+            this.pnlShow.Controls.Add(this.label1);
+            this.pnlShow.Controls.Add(this.txtCustomer);
             this.pnlShow.Controls.Add(this.pnlInfo);
             this.pnlShow.Controls.Add(this.btnBook);
             this.pnlShow.Controls.Add(this.lstCars);
@@ -122,6 +128,33 @@
             this.pnlInfo.Name = "pnlInfo";
             this.pnlInfo.Size = new System.Drawing.Size(133, 108);
             this.pnlInfo.TabIndex = 2;
+            // 
+            // lblColorInfo
+            // 
+            this.lblColorInfo.AutoSize = true;
+            this.lblColorInfo.Location = new System.Drawing.Point(47, 78);
+            this.lblColorInfo.Name = "lblColorInfo";
+            this.lblColorInfo.Size = new System.Drawing.Size(35, 13);
+            this.lblColorInfo.TabIndex = 5;
+            this.lblColorInfo.Text = "label6";
+            // 
+            // lblModelInfo
+            // 
+            this.lblModelInfo.AutoSize = true;
+            this.lblModelInfo.Location = new System.Drawing.Point(50, 47);
+            this.lblModelInfo.Name = "lblModelInfo";
+            this.lblModelInfo.Size = new System.Drawing.Size(35, 13);
+            this.lblModelInfo.TabIndex = 4;
+            this.lblModelInfo.Text = "label5";
+            // 
+            // lblMakeInfo
+            // 
+            this.lblMakeInfo.AutoSize = true;
+            this.lblMakeInfo.Location = new System.Drawing.Point(47, 16);
+            this.lblMakeInfo.Name = "lblMakeInfo";
+            this.lblMakeInfo.Size = new System.Drawing.Size(30, 13);
+            this.lblMakeInfo.TabIndex = 3;
+            this.lblMakeInfo.Text = "aasd";
             // 
             // label4
             // 
@@ -153,7 +186,7 @@
             // 
             // btnBook
             // 
-            this.btnBook.Location = new System.Drawing.Point(77, 135);
+            this.btnBook.Location = new System.Drawing.Point(6, 135);
             this.btnBook.Name = "btnBook";
             this.btnBook.Size = new System.Drawing.Size(102, 40);
             this.btnBook.TabIndex = 1;
@@ -269,32 +302,29 @@
             this.lstReturn.Size = new System.Drawing.Size(262, 108);
             this.lstReturn.TabIndex = 0;
             // 
-            // lblMakeInfo
+            // txtCustomer
             // 
-            this.lblMakeInfo.AutoSize = true;
-            this.lblMakeInfo.Location = new System.Drawing.Point(47, 16);
-            this.lblMakeInfo.Name = "lblMakeInfo";
-            this.lblMakeInfo.Size = new System.Drawing.Size(30, 13);
-            this.lblMakeInfo.TabIndex = 3;
-            this.lblMakeInfo.Text = "aasd";
+            this.txtCustomer.Location = new System.Drawing.Point(165, 136);
+            this.txtCustomer.Name = "txtCustomer";
+            this.txtCustomer.Size = new System.Drawing.Size(100, 20);
+            this.txtCustomer.TabIndex = 4;
             // 
-            // lblModelInfo
+            // label1
             // 
-            this.lblModelInfo.AutoSize = true;
-            this.lblModelInfo.Location = new System.Drawing.Point(50, 47);
-            this.lblModelInfo.Name = "lblModelInfo";
-            this.lblModelInfo.Size = new System.Drawing.Size(35, 13);
-            this.lblModelInfo.TabIndex = 4;
-            this.lblModelInfo.Text = "label5";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(124, 139);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Name";
             // 
-            // lblColorInfo
+            // lblWarning
             // 
-            this.lblColorInfo.AutoSize = true;
-            this.lblColorInfo.Location = new System.Drawing.Point(47, 78);
-            this.lblColorInfo.Name = "lblColorInfo";
-            this.lblColorInfo.Size = new System.Drawing.Size(35, 13);
-            this.lblColorInfo.TabIndex = 5;
-            this.lblColorInfo.Text = "label6";
+            this.lblWarning.AutoSize = true;
+            this.lblWarning.Location = new System.Drawing.Point(124, 159);
+            this.lblWarning.Name = "lblWarning";
+            this.lblWarning.Size = new System.Drawing.Size(0, 13);
+            this.lblWarning.TabIndex = 6;
             // 
             // Form1
             // 
@@ -347,6 +377,9 @@
         private System.Windows.Forms.Label lblColorInfo;
         private System.Windows.Forms.Label lblModelInfo;
         private System.Windows.Forms.Label lblMakeInfo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCustomer;
+        private System.Windows.Forms.Label lblWarning;
     }
 }
 
